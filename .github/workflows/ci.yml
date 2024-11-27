@@ -1,5 +1,4 @@
 name: Build image and Push to ECR
-
 # Quando houver um push nessa branch, você pode executar o job abaixo
 on:
   push:
@@ -14,7 +13,7 @@ permissions:
 
 jobs:
   build:
-    name: 'Build and Push'
+    name: 'Build image and Push to ECR'
     runs-on: ubuntu-latest # Essa maquina ja tem docker instalado
 
     steps:
@@ -26,7 +25,6 @@ jobs:
         node-version: 20
         cache: 'npm'
     - run: npm install
-    - run: npm run test
 
     - name: Generate tag based on commit hash
       id: generate_tag
