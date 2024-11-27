@@ -50,8 +50,8 @@ jobs:
 
       run: | 
         docker build -t $REGISTRY/server-api:$TAG .
-        # docker tag $REGISTRY/server-api:$TAG $REGISTRY/server-api:latest
-        docker push $REGISTRY/server-api:$TAG
+        docker tag $REGISTRY/server-api:$TAG $REGISTRY/server-api:latest
+        docker push $REGISTRY/server-api:latest
         IMAGE=$(echo $REGISTRY/server-api:$TAG)
         echo "image=$IMAGE" >> $GITHUB_OUTPUT
 
@@ -64,6 +64,6 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 575108923772.dkr.ecr.us-east-2.amazonaws.com
-          docker pull 575108923772.dkr.ecr.us-east-1.amazonaws.com/server-api:${{ steps.generate_tag.outputs.sha }}
-          docker run --name server-api -d -p 3000:3000 575108923772.dkr.ecr.us-east-2.amazonaws.com/server-api:${{ steps.generate_tag.outputs.sha }}
+          docker pull 575108923772.dkr.ecr.us-east-1.amazonaws.com/server-api:latest
+          docker run --name server-api -d -p 3000:3000 575108923772.dkr.ecr.us-east-2.amazonaws.com/server-api:latest
 
