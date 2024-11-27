@@ -1,0 +1,16 @@
+{
+  "name": "saas",
+  "version": "1.0.0",
+  "description": "https://www.facebook.com/connect/login_success.html#access_token=EAAGm0PX4ZCpsBO3CIM5e7xrzLKDMrgm66dhVUxmM9Unzank1zPFeDRvPimjERZAxuSZBHeP7W4tX79NqlI0BT2y04aaY3bX1bzGTOaZBbQFr9QZCZBz7ImUwmZCKwznXOVbiKNe7MS6jdii28aLHJuyiVEowrwVmUcdBhPnxIpUPYNGDpoZBwcpNkCY80AZCqDVWp4HWFdzEaLGhiXUYCprZAohCE75n7ReWxi1wZDZD&data_access_expiration_time=1737653564&expires_in=5235&long_lived_token=EAAGm0PX4ZCpsBO4D8rbPVHRYX7DbyuwfGGFQuTcWFPi3ZACUNFUEIYg6ByJkZCYuVMhj1CNhjX3U1ENfaIeQGF9NWD7gDfXNWnPnAIsfxpXeIF64kvP0FYjMEGKgdsfFBYXqtBBvVcSRczvaXwy8YBF3PHp15h28SswZBhq9JPZAPaz6LKyiRXp8LG8ZAo5axZAfZCkA15rScAZDZD",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
