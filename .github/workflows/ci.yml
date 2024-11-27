@@ -49,9 +49,8 @@ jobs:
         TAG: ${{ steps.generate_tag.outputs.sha }}
       # Depois com push --all tags
       run: | 
-        docker build -t $REGISTRY/nest-ci-api:$TAG .
-        docker tag $REGISTRY/nest-ci-api:$TAG $REGISTRY/nest-ci-api:latest
-        docker push --all-tags $REGISTRY/nest-ci-api:latest
-        IMAGE=$(echo $REGISTRY/nest-ci-api:$TAG)
+        docker build -t $REGISTRY/server-api:$TAG .
+        docker tag $REGISTRY/server-api:$TAG $REGISTRY/server-api:latest
+        docker push --all-tags $REGISTRY/server-api:latest
+        IMAGE=$(echo $REGISTRY/server-api:$TAG)
         echo "image=$IMAGE" >> $GITHUB_OUTPUT
-
